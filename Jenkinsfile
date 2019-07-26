@@ -14,6 +14,7 @@ pipeline {
        }
         }
         stage ('message') {
+               steps {
 
     wrap([$class: 'BuildUser']) {
 
@@ -30,7 +31,7 @@ pipeline {
     } else {
         slackSend (channel: '@$name', color: '#36A64F', message: "Job failed")
     }
-
+               }
 }
     }
 }
