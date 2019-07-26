@@ -12,15 +12,7 @@ pipeline {
            color: 'red', iconEmoji: '', 
            message: 'Slack'
        }
-        }
-        stage ('message') {
-               steps {
-    if ( "$output" == success ) {
-        slackSend (channel: 'rivet-jenkins', color: '#36A64F', message: "Job succeeded")
-    } else {
-        slackSend (channel: 'rivet-jenkins', color: '#36A64F', message: "Job failed")
-    }
-               }
+      
 }
     }
 }
