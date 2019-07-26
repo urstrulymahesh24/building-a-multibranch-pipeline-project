@@ -15,7 +15,6 @@ pipeline {
         }
         stage ('message') {
                steps {
-
     if ( "$output" != null ) {
         slackSend (channel: 'rivet-jenkins', color: '#36A64F', message: "Job succeeded")
     } else {
@@ -24,5 +23,4 @@ pipeline {
                }
 }
     }
-}
 }
