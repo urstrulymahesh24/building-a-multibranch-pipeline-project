@@ -8,7 +8,7 @@ pipeline {
         notifyStarted()
       }
     }
-        ...
+ 
   }
   post {
     success {
