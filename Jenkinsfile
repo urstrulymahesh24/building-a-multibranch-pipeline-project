@@ -24,7 +24,7 @@ pipeline {
     }
 
     failure {
-      slackSend (color: '#FF0000', message: Succeded for ${env.CONTENT_GIT_REPO} for Repository ${env.CONTENT_GIT_URL} "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+      slackSend (color: '#FF0000', message: "FAILED: Succeded for ${env.CONTENT_GIT_REPO} for Repository ${env.CONTENT_GIT_URL} Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
       
     }
   }
