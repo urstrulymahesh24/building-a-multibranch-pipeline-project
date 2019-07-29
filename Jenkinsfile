@@ -29,5 +29,10 @@ pipeline {
       
     }
   }
+    def notifySlack(text, channel) {
+    def GitURL = 'https://github.com/urstrulymahesh24/building-a-multibranch-pipeline-project.git'
+    sh "curl -X POST --data-urlencode ${GitURL}"
+}
+    
     }
 
