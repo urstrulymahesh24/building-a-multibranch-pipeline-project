@@ -9,7 +9,7 @@ pipeline {
    stage ('Start') {
       steps {
         // send build started notifications
-        slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+        slackSend (color: '#FFFF00', message: "STARTED: Succeded for ${env.CONTENT_GIT_REPO} for Repository ${env.CONTENT_GIT_URL} Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
 
       
       }
