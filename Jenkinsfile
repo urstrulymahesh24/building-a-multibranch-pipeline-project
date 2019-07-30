@@ -9,7 +9,7 @@ pipeline {
    stage ('Start') {
       steps {
         // send build started notifications
-        slackSend (color: '#FFFF00', message: "STARTED: Succeded for Git URL ${env.CHANGE_URL} Job name '${env.JOB_NAME} build no [${env.BUILD_NUMBER}]' Jenkins URL (${env.BUILD_URL})")
+        slackSend (color: '#FFFF00', message: "STARTED: Succeded for Git URL ${env.https://github.com/urstrulymahesh24/building-a-multibranch-pipeline-project.git} Job name '${env.JOB_NAME} build no [${env.BUILD_NUMBER}]' Jenkins URL (${env.BUILD_URL})")
       
       }
     }
