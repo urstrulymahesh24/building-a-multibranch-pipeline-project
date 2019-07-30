@@ -19,7 +19,7 @@ pipeline {
   post {
     success {
       slackSend (color: '#00FF00', message: "SUCCESSFUL: Job name '${env.JOB_NAME} build no [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-
+      slackSend (git([url: 'https://github.com/urstrulymahesh24/building-a-multibranch-pipeline-project.git', branch: 'master']))
      
     }
 
