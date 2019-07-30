@@ -1,5 +1,4 @@
 pipeline {
-    GIT_NAME=$(git --no-pager show -s --format='%an' $GIT_COMMIT)
     agent any
     stages {
         stage('Build') {
@@ -27,8 +26,5 @@ pipeline {
       
     }
   }
-  env.GIT_NAME = sh(
-   script: "git --no-pager show -s --format='%ae'",
-   returnStdout: true
-).trim()
+ 
 } 
